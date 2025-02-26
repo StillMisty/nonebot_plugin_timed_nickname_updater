@@ -1,6 +1,6 @@
 [project]
 name = "nonebot-plugin-timed-nickname-updater"
-version = "0.1.2"
+version = "0.1.3"
 authors = [{ name = "StillMisty", email = "1772797842@qq.com" }]
 description = "基于Nonebot2，按时更新群友昵称中日期。"
 readme = "README.md"
