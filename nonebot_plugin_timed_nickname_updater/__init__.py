@@ -1,5 +1,6 @@
 from nonebot import require, get_bots
 from nonebot.adapters.onebot.v11 import GroupMessageEvent, Bot
+from nonebot.plugin import PluginMetadata
 
 import re
 import json
@@ -19,6 +20,15 @@ from nonebot_plugin_apscheduler import scheduler  # noqa: E402
 
 require("nonebot_plugin_localstore")
 import nonebot_plugin_localstore as store  # noqa: E402
+
+__plugin_meta__ = PluginMetadata(
+    name="群昵称更新",
+    description="按时更新群友昵称中日期数字",
+    usage="1.昵称更新 <更新值> <间隔>：更新值为整数，默认为 1，间隔为整数，以天为单位，默认为 1\n2.昵称重置 <更新值>：将昵称中数字重置为更新值，默认为 0",
+    type="application",
+    homepage="https://github.com/StillMisty/nonebot_plugin_timed_nickname_updater",
+    supported_adapters={"~onebot.v11"},
+)
 
 name_updater = on_alconna(
     Alconna(
