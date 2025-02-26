@@ -74,7 +74,7 @@ async def _(
 
     # 更新数据
     set_data(group_id, user_id, value, days)
-    await name_updater.finish(f"昵称变化将{value}，每{days}天更新一次")
+    await name_updater.finish(f"昵称将变化{value}，每{days}天更新一次")
 
 
 @name_reset.handle()
